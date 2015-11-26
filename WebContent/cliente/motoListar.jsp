@@ -7,20 +7,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Aparício - UC05</title>
+<title>Anna - UC004</title>
 </head>
 <body>
 	<h2>Listando Mototaxistas</h2>
 	<br />
 	
-	<!-- 
 	<p>
 		<a
-			href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=escolherArtista">Mostrar a média de um MotoTaxista
+			href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mototaxistaEscolherEmpresa">Adicionar novo MotoTaxista
 			
 		</a>
 	</p>
-	 -->
+
 	
 	<table border=1>
 		<thead>
@@ -29,7 +28,7 @@
 				<th>Nome</th>
 				<th>Placa</th>
 				<th>Disponível</th>
-				<!-- <th>Média</th> -->
+				<th>Empresa</th>
 				<th colspan=2>Ação</th> 
 			</tr>
 		</thead>
@@ -42,12 +41,14 @@
 					<td>${x.disponivel}</td>
 					<!-- <td>${x.media()}</td>  -->
 					
-					<!-- 
-					<td><a
-						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a></td>
-					 -->
-					<td><a
-						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mediacalc&cod=${x.codMotoTaxista}">Mostrar média</a></td>
+					 
+					<td>${x.empresa.nomeFantasia}</td>
+				
+				<td>
+				<a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a>
+				<a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=deletar&cod=${x.codMotoTaxista}">Excluir</a></td>
+				
+					
 				</tr>
 			</c:forEach>
 		</tbody>
