@@ -122,7 +122,7 @@ import servico.ServicoFactory;
 	private MotoTaxista instanciar(HttpServletRequest req) {
 		EmpresaServico empresaServico = ServicoFactory.criarEmpresaServico();
 		String aux;
-		Boolean aux2 = true;
+		Boolean aux2 = false;
 		MotoTaxista x = new MotoTaxista();
 		aux = req.getParameter("codMotoTaxista");
 			if (aux != null && !aux.isEmpty())

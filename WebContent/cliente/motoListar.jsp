@@ -38,15 +38,13 @@
 					<td>${x.codMotoTaxista}</td>
 					<td>${x.nome}</td>
 					<td>${x.placa}</td>
-					<td>${x.disponivel}</td>
-					<!-- <td>${x.media()}</td>  -->
-					
+					<td>${x.disponivel}</td>					
 					 
 					<td>${x.empresa.nomeFantasia}</td>
 				
 				<td>
 				<a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a>
-				<a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=deletar&cod=${x.codMotoTaxista}">Excluir</a></td>
+				<a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=deletar&cod=${x.codMotoTaxista}">Deletar</a></td>
 				
 					
 				</tr>
