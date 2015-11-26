@@ -21,7 +21,7 @@
 	</p>
 
 	
-	<table border=1>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Código</th>
@@ -29,7 +29,7 @@
 				<th>Placa</th>
 				<th>Disponível</th>
 				<th>Empresa</th>
-				<th colspan=2>Ação</th> 
+				<th colspan="2">Ação</th> 
 			</tr>
 		</thead>
 		<tbody>
