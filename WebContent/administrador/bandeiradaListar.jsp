@@ -7,47 +7,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Aparício - UC05</title>
+<title>Teste CRUD</title>
 </head>
 <body>
-	<h2>Listando Mototaxistas</h2>
+	<h2>Lista de Bandeiradas</h2>
 	<br />
-	
-	<!-- 
 	<p>
 		<a
-			href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=escolherArtista">Mostrar a média de um MotoTaxista
-			
-		</a>
+			href="<%=request.getContextPath()%>/administrador/BandeiradaCRUD?cmd=novo">Adicionar
+			nova Bandeirada</a>
 	</p>
-	 -->
-	
 	<table border=1>
 		<thead>
 			<tr>
 				<th>Código</th>
-				<th>Nome</th>
-				<th>Placa</th>
-				<th>Disponível</th>
-				<!-- <th>Média</th> -->
-				<th colspan=2>Ação</th> 
+				<th>Valor Inicial</th>
+				<th>Valor KM</th>
+				<th colspan=2>Ação</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${lista}" var="x">
 				<tr>
-					<td>${x.codMotoTaxista}</td>
-					<td>${x.nome}</td>
-					<td>${x.placa}</td>
-					<td>${x.disponivel}</td>
-					<!-- <td>${x.media()}</td>  -->
-					
-					<!-- 
+					<td>${x.codBandeirada}</td>
+					<td>${x.valorInicial}</td>
+					<td>${x.valorKM}</td>
 					<td><a
-						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a></td>
-					 -->
+						href="<%=request.getContextPath()%>/administrador/BandeiradaCRUD?cmd=editar&cod=${x.codBandeirada}">Editar</a></td>
 					<td><a
-						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mediacalc&cod=${x.codMotoTaxista}">Mostrar média</a></td>
+						href="<%=request.getContextPath()%>/administrador/BandeiradaCRUD?cmd=deletar&cod=${x.codBandeirada}">Excluir</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
