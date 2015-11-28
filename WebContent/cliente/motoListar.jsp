@@ -12,7 +12,7 @@
 <body>
 	<h2>Listando Mototaxistas</h2>
 	<br />
-	
+
 	<!-- 
 	<p>
 		<a
@@ -21,33 +21,34 @@
 		</a>
 	</p>
 	 -->
-	
+
 	<table border=1>
 		<thead>
 			<tr>
-				<th>Código</th>
+				<!-- <th>Código</th> -->
 				<th>Nome</th>
 				<th>Placa</th>
 				<th>Disponível</th>
 				<!-- <th>Média</th> -->
-				<th colspan=2>Ação</th> 
+				<th colspan=2>Ação</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${lista}" var="x">
 				<tr>
-					<td>${x.codMotoTaxista}</td>
+					<!-- <td>${x.codMotoTaxista}</td> -->
 					<td>${x.nome}</td>
 					<td>${x.placa}</td>
 					<td>${x.disponivel}</td>
 					<!-- <td>${x.media()}</td>  -->
-					
+
 					<!-- 
 					<td><a
 						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a></td>
 					 -->
 					<td><a
-						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mediacalc&cod=${x.codMotoTaxista}">Mostrar média</a></td>
+						href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mediacalc&cod=${x.codMotoTaxista}">Mostrar
+							média</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
