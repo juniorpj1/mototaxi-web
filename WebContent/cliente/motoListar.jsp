@@ -25,7 +25,7 @@
 	<table border=1>
 		<thead>
 			<tr>
-				<!-- <th>Código</th> -->
+				<th>Código</th>
 				<th>Nome</th>
 				<th>Placa</th>
 				<th>Disponível</th>
@@ -36,7 +36,7 @@
 		<tbody>
 			<c:forEach items="${lista}" var="x">
 				<tr>
-					<!-- <td>${x.codMotoTaxista}</td> -->
+					<td>${x.codMotoTaxista}</td> 
 					<td>${x.nome}</td>
 					<td>${x.placa}</td>
 					<td>${x.disponivel}</td>
