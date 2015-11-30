@@ -1354,10 +1354,10 @@ a.text-success:hover {
   color: #449d44;
 }
 .text-info {
-  color: #000000;
+  color: #0000ff;
 }
 a.text-info:hover {
-  color: #000000;
+  color: #0000cc;
 }
 .text-warning {
   color: #f0ad4e;
@@ -1385,10 +1385,10 @@ a.bg-success:hover {
   background-color: #80c780;
 }
 .bg-info {
-  background-color: #333333;
+  background-color: #6666ff;
 }
 a.bg-info:hover {
-  background-color: #1a1a1a;
+  background-color: #3333ff;
 }
 .bg-warning {
   background-color: #f8d9ac;
@@ -2381,14 +2381,14 @@ table th[class*="col-"] {
 .table > thead > tr.info > th,
 .table > tbody > tr.info > th,
 .table > tfoot > tr.info > th {
-  background-color: #333333;
+  background-color: #6666ff;
 }
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: #262626;
+  background-color: #4c4cff;
 }
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
@@ -3083,7 +3083,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #000000;
 }
 .btn-primary {
-  color: #000000;
+  color: #ffffff;
   background-color: #000000;
   border-color: #000000;
 }
@@ -3093,7 +3093,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #000000;
+  color: #ffffff;
   background-color: #000000;
   border-color: #000000;
 }
@@ -3125,7 +3125,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-primary .badge {
   color: #000000;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 .btn-success {
   color: #ffffff;
@@ -3174,8 +3174,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #0000ff;
+  border-color: #0000e6;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3184,8 +3184,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #0000cc;
+  border-color: #0000a8;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3210,11 +3210,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #0000ff;
+  border-color: #0000e6;
 }
 .btn-info .badge {
-  color: #000000;
+  color: #0000ff;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4779,11 +4779,11 @@ a.label:focus {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #000000;
+  background-color: #0000ff;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #000000;
+  background-color: #0000cc;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -4953,15 +4953,15 @@ a.thumbnail.active {
   color: #449d44;
 }
 .alert-info {
-  background-color: #333333;
-  border-color: #212121;
-  color: #000000;
+  background-color: #6666ff;
+  border-color: #4262ff;
+  color: #0000ff;
 }
 .alert-info hr {
-  border-top-color: #141414;
+  border-top-color: #294cff;
 }
 .alert-info .alert-link {
-  color: #000000;
+  color: #0000cc;
 }
 .alert-warning {
   background-color: #f8d9ac;
@@ -5047,7 +5047,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #000000;
+  background-color: #0000ff;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5212,26 +5212,26 @@ a.list-group-item-success.active:focus {
   border-color: #5cb85c;
 }
 .list-group-item-info {
-  color: #000000;
-  background-color: #333333;
+  color: #0000ff;
+  background-color: #6666ff;
 }
 a.list-group-item-info {
-  color: #000000;
+  color: #0000ff;
 }
 a.list-group-item-info .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-info:hover,
 a.list-group-item-info:focus {
-  color: #000000;
-  background-color: #262626;
+  color: #0000ff;
+  background-color: #4c4cff;
 }
 a.list-group-item-info.active,
 a.list-group-item-info.active:hover,
 a.list-group-item-info.active:focus {
   color: #fff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #0000ff;
+  border-color: #0000ff;
 }
 .list-group-item-warning {
   color: #f0ad4e;
@@ -5571,22 +5571,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #9ccf91;
 }
 .panel-info {
-  border-color: #212121;
+  border-color: #4262ff;
 }
 .panel-info > .panel-heading {
-  color: #000000;
-  background-color: #333333;
-  border-color: #212121;
+  color: #0000ff;
+  background-color: #6666ff;
+  border-color: #4262ff;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #212121;
+  border-top-color: #4262ff;
 }
 .panel-info > .panel-heading .badge {
-  color: #333333;
-  background-color: #000000;
+  color: #6666ff;
+  background-color: #0000ff;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #212121;
+  border-bottom-color: #4262ff;
 }
 .panel-warning {
   border-color: #f6bd95;
@@ -6588,7 +6588,7 @@ body {
   color: #ffffff !important;
 }
 .jumbotron h1.text-info {
-  color: #000000 !important;
+  color: #0000ff !important;
 }
 .jumbotron h1.text-success {
   color: #5cb85c !important;
@@ -6620,13 +6620,13 @@ body {
 }
 .section-primary {
   background-color: #000000 !important;
-  color: #000000;
+  color: #ffffff;
 }
 .section-primary .background-image {
   opacity: 0.5;
 }
 .section-info {
-  background-color: #000000 !important;
+  background-color: #0000ff !important;
   color: #ffffff;
 }
 .section-info .background-image {
@@ -6711,7 +6711,7 @@ body {
   color: #ffffff !important;
 }
 .cover h1.text-info {
-  color: #000000 !important;
+  color: #0000ff !important;
 }
 .cover h1.text-success {
   color: #5cb85c !important;
