@@ -10,9 +10,8 @@
 <title>Roberto - UC010</title>
 </head>
 <body>
-	<h2>Procurar Mototaxista por Nome:</h2>
+	<h2>Mototaxistas por Nome:</h2>
 	<br />
-
 
 	<table border="1">
 		<thead>
@@ -22,10 +21,10 @@
 				<th>Placa</th>
 				<th>Disponível</th>
 				<th>Empresa</th>
-				<th colspan="2">Ação</th>
+				<!--  th colspan="2">Ação</th-->
 			</tr>
 		</thead>
-		<tbody>
+	    <tbody>
 			<c:forEach items="${lista}" var="x">
 				<tr>
 					<td>${x.codMotoTaxista}</td>
@@ -34,11 +33,10 @@
 					<td>${x.disponivel}</td>
 
 					<td>${x.empresa.nomeFantasia}</td>
-
-					<td>
+								
 				</tr>
-			</c:forEach>
-		</tbody>
+			</c:forEach>	
+</tbody>
 	</table>
 </body>
 </html>

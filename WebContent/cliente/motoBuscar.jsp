@@ -12,17 +12,10 @@
 <body>
 	<h2>Procurar Mototaxista por Nome:</h2>
 	<br />
+<form method="get" action="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD?cmd=listar&cmd=${moto.nome}" >
+	<input type="text" name="nome"> 
+	<input type="submit" value="Pesquisar" />
 
-	<input type="text" name="moto">
-	<a
-		href="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD?cmd=mototaxistaProcurarPorNome">Pesquisar
-
-	</a>
-
-
-	</tr>
-
-	</tbody>
-	</table>
+</form>
 </body>
 </html>
