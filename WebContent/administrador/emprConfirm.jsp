@@ -7,33 +7,38 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta charset="utf-8">
 		<link rel="icon" href="resources/img/icone-uberlandia-mototaxi.ico">
 		<meta http-equiv="X-UA-Compatible" content="IE-edge">
 		<meta name="description" content="">
 		<meta name="author" content="Anna Carolina Novaes">
 		
 		<title>Uberlândia Mototáxi</title>
-
+		
 		<!--  +++++++++++ REFERENCIAS BASICAS DO BOOTSTRAP +++++++++++ -->
 		<%@ include file="/resources/includes/refs-bootstrap-inicio.jsp"%> 
 	</head>
 	<body>
 		<!--  +++++++++++ BARRA DE NAVEGACAO +++++++++++ -->
 		 <%@ include file="/resources/includes/barra-superior.jsp"%> 
-		 
-		 <!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
-		 
-		  <div id="margem-grande">
-		 	<div class="container">
-		 		<div class="row">
-		 			<div class="col-lg-8 col-lg-offset-2 centered">
-		 				<h1>Ocorreu um erro:</h1>
-		 					<p>${erro}</p>
-		 					
-		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar ao caso de uso<br></a></b>
-		 			</div>
-		 		</div>
+		
+		<!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
+		 <div id="margem-pequena">
+		 	<div id="main" class="container-fluid">
+		 	
+		 		<h3 class="page-header"> Inserido com sucesso! Código: <c:out value = ${mot.codMotoTaxista}"/></h3>
+		 		<b> <a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/EmpresaCRUD?cmd=listar">Voltar ao caso de uso<br></a></b>
 		 	</div>
 		 </div>
+		 
+		 <!--  +++++++++++ RODAPE +++++++++++ -->
+		 <%@ include file="/resources/includes/rodape.jsp"%> 
+		
+		 <!--  +++++++++++ REFERENCIAS ADICIONAIS DO BOOTSTRAP +++++++++++ -->
+		 <%@ include file="/resources/includes/refs-bootstrap-final.jsp"%> 
+		 
+		 		 <!--  +++++++++++ CODIGO DA JANELA MODAL DE CONFIRMAR EXCLUSAO +++++++++++ -->
+		 <%@ include file="/resources/includes/confirmar-exclusao-modal.jsp"%> 
+		
 	</body>
 </html>

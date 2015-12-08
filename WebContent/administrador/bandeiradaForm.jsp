@@ -20,20 +20,22 @@
 	<body>
 		<!--  +++++++++++ BARRA DE NAVEGACAO +++++++++++ -->
 		 <%@ include file="/resources/includes/barra-superior.jsp"%> 
+		
+<%-- 		Código : <input type="text" readonly="readonly" name="codBandeirada" value="${ban.codBandeirada}" /> <br /> <br />  --%>
+<%-- 			Preço Inicial : <input type="text" name="valorInicial" value="${ban.valorInicial}" /> <br /><br />  --%>
+<%-- 			Preço KM: <input type="text" name="valorKM" value="${ban.valorKM}" /> <br /><br />  --%>
+<!-- 			<input type="submit" value="Enviar" /> -->
+		
+		
+		
+		 <!--  +++++++++++ RODAPE +++++++++++ -->
+		 <%@ include file="/resources/includes/rodape.jsp"%> 
+		
+		 <!--  +++++++++++ REFERENCIAS ADICIONAIS DO BOOTSTRAP +++++++++++ -->
+		 <%@ include file="/resources/includes/refs-bootstrap-final.jsp"%> 
 		 
-		 <!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
-		 
-		  <div id="margem-grande">
-		 	<div class="container">
-		 		<div class="row">
-		 			<div class="col-lg-8 col-lg-offset-2 centered">
-		 				<h1>Ocorreu um erro:</h1>
-		 					<p>${erro}</p>
-		 					
-		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar ao caso de uso<br></a></b>
-		 			</div>
-		 		</div>
-		 	</div>
-		 </div>
+		 <!--  +++++++++++ CODIGO DA JANELA MODAL DE CONFIRMAR EXCLUSAO +++++++++++ 
+		 <%@ include file="/resources/includes/confirmar-exclusao-modal.jsp"%>-->
+		
 	</body>
 </html>

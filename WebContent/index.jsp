@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta charset="utf-8">
 		<link rel="icon" href="resources/img/icone-uberlandia-mototaxi.ico">
 		<meta http-equiv="X-UA-Compatible" content="IE-edge">
 		<meta name="description" content="">
@@ -20,20 +21,18 @@
 	<body>
 		<!--  +++++++++++ BARRA DE NAVEGACAO +++++++++++ -->
 		 <%@ include file="/resources/includes/barra-superior.jsp"%> 
+		
+		<!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
+		 <%@ include file="/resources/includes/template-inicial.jsp"%> 
 		 
-		 <!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
+		 <!--  +++++++++++ RODAPE +++++++++++ -->
+		 <%@ include file="/resources/includes/rodape.jsp"%> 
+		
+		 <!--  +++++++++++ REFERENCIAS ADICIONAIS DO BOOTSTRAP +++++++++++ -->
+		 <%@ include file="/resources/includes/refs-bootstrap-final.jsp"%> 
 		 
-		  <div id="margem-grande">
-		 	<div class="container">
-		 		<div class="row">
-		 			<div class="col-lg-8 col-lg-offset-2 centered">
-		 				<h1>Ocorreu um erro:</h1>
-		 					<p>${erro}</p>
-		 					
-		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar ao caso de uso<br></a></b>
-		 			</div>
-		 		</div>
-		 	</div>
-		 </div>
+		 		 <!--  +++++++++++ CODIGO DA JANELA MODAL DE CONFIRMAR EXCLUSAO +++++++++++ -->
+		 <%@ include file="/resources/includes/confirmar-exclusao-modal.jsp"%> 
+		
 	</body>
 </html>

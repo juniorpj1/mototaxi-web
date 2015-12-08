@@ -16,8 +16,10 @@ import servico.ServicoFactory;
 	@WebServlet("/cliente/EmpresaCRUD")
 	public class EmpresaCRUD extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static String INSERIR_OU_ALTERAR = "/cliente/empresaForm.jsp";
-	private static String LISTAR = "/cliente/empresaListar.jsp";
+	
+	private static String CONFIRMACAO = "/administrador/emprConfirm.jsp";
+	private static String INSERIR_OU_ALTERAR = "/administrador/empresaForm.jsp";
+	private static String LISTAR = "/administrador/empresaListar.jsp";
 	private static String ERRO = "/publico/erro.jsp";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +31,7 @@ import servico.ServicoFactory;
 				cmd = "listar";
 
 			if (cmd.equalsIgnoreCase("deletar")) {
-				int cod = Integer.parseInt(request.getParameter("empr"));
+				int cod = Integer.parseInt(request.getParameter("cod"));
 					try {
 						Empresa empr = empresaServico.buscar(cod);
 						if (empr != null) {
@@ -43,7 +45,6 @@ import servico.ServicoFactory;
 					}
 			}
 
-
 			else if (cmd.equalsIgnoreCase("editar")) {
 				int cod = Integer.parseInt(request.getParameter("cod"));
 					try {
@@ -54,7 +55,7 @@ import servico.ServicoFactory;
 							}
 							else {
 								request.setAttribute("lista", empresaServico.buscarTodos());
-								forward = LISTAR;
+								forward = CONFIRMACAO;
 							}
 					} catch (RuntimeException e) {
 						request.setAttribute("Erro de execução: ", e.getMessage());
