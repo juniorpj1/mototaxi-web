@@ -21,7 +21,7 @@ public class MotoTaxistas2CRUD extends HttpServlet {
 	private static String LISTAR = "/cliente/mototaxistaProcurarPorNome.jsp";
 	private static String ERRO = "/publico/erro.jsp";
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		MotoTaxistaServico motoService = ServicoFactory.criarMotoTaxistaServico();
 
@@ -41,9 +41,7 @@ public class MotoTaxistas2CRUD extends HttpServlet {
 					request.setAttribute("lista", motoService.buscarTodos());
 					forward = LISTAR;
 				}
-				
-				
-				request.setAttribute("lista", motoService.buscarPorNome(cmd));
+
 				forward = LISTAR;
 			} catch (RuntimeException e) {
 				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
