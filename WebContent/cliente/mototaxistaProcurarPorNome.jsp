@@ -16,12 +16,12 @@
 	<table border="1">
 		<thead>
 			<tr>
-				<th>Código</th>
+				<th>CÃ³digo</th>
 				<th>Nome</th>
 				<th>Placa</th>
-				<th>Disponível</th>
+				<th>DisponÃ­vel</th>
 				<th>Empresa</th>
-				<!--  th colspan="2">Ação</th-->
+				<!--  th colspan="2">AÃ§Ã£o</th-->
 			</tr>
 		</thead>
 	    <tbody>
@@ -36,6 +36,10 @@
 								
 				</tr>
 			</c:forEach>	
+			<form method="post" action="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD?cmd=listar&nome=${x.nome}" >
+	<input type="text" name="nome"> 
+	<input type="submit" value="Pesquisar" />
+
 </tbody>
 	</table>
 </body>
