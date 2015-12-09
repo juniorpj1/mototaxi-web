@@ -34,7 +34,7 @@ public class MotoTaxistas2CRUD extends HttpServlet {
 			try {
 				List<MotoTaxista> moto = motoService.buscarPorNome(cmd);
 				if (moto != null) {
-					request.setAttribute("moto", moto);
+					request.setAttribute("lista", moto);
 					forward = LISTAR;
 				}
 				else {
@@ -46,7 +46,7 @@ public class MotoTaxistas2CRUD extends HttpServlet {
 				request.setAttribute("lista", motoService.buscarPorNome(cmd));
 				forward = LISTAR;
 			} catch (RuntimeException e) {
-				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
+				request.setAttribute("erro", "Erro de execuÃ§Ã£o: " + e.getMessage());
 				forward = ERRO;
 			}
 			RequestDispatcher rd = request.getRequestDispatcher(forward);
