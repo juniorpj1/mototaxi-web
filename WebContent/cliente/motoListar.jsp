@@ -16,14 +16,14 @@
 	<h2>Lista de Mototaxistas</h2>
 	<br />
 
-	<table border=1>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Código</th>
 				<th>Nome</th>
 				<th>Placa</th>
 				<th>Disponível</th>
-				<th colspan=2>Ação</th>
+				<th colspan="2">Ação</th>
 			</tr>
 		</thead>
 		<tbody>

@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.*;
 
+@SuppressWarnings("unused")
 @Entity
 @Table(name="tb_avaliacao")
 

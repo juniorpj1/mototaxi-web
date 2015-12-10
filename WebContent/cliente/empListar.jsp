@@ -15,14 +15,14 @@
 	<h2>Lista de Empresas</h2>
 	<br />
 
-	<table border=1>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Código</th>
 				<th>Nome Fantasia</th>
 				<th>CNPJ</th>
 				<th>CEP</th>
-				<th colspan=2>Ação</th>
+				<th colspan="2">Ação</th>
 			</tr>
 		</thead>
 		<tbody>

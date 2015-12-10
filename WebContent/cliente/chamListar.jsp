@@ -15,7 +15,7 @@
 	<h2>Chamados por Período</h2>
 	<br />
 
-	<table border=1>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Código</th>
