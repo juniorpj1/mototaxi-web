@@ -3,6 +3,7 @@ package dominio;
 import java.io.Serializable;
 
 import javax.persistence.*;
+import java.util.*;
 
 @Entity
 @Table(name="tb_avaliacao")
