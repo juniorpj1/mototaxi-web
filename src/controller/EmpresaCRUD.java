@@ -18,6 +18,7 @@ import servico.ServicoFactory;
 	public class EmpresaCRUD extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	private static String VISUALIZAR = "/administrador/visualizarEmpresa.jsp";
 	private static String CONFIRMACAO = "/administrador/emprConfirm.jsp";
 	private static String INSERIR_OU_ALTERAR = "/administrador/empresaForm.jsp";
 	private static String LISTAR = "/administrador/empresaListar.jsp";
@@ -66,6 +67,20 @@ import servico.ServicoFactory;
 						request.setAttribute("Erro de execução: ", e.getMessage());
 						forward = ERRO;
 					}
+			}
+			
+			else if (cmd.equalsIgnoreCase("visualizar")) {
+				int cod = Integer.parseInt(request.getParameter("cod"));
+				try {
+					Empresa empr = empresaServico.buscar(cod);
+					if (empr != null) {
+						request.setAttribute("empr", empr);
+						forward = VISUALIZAR;
+					} 
+				} catch (RuntimeException e) {
+					request.setAttribute("Erro de execução: ", e.getMessage());
+					forward = ERRO;
+				}
 			}
 
 			else if (cmd.equalsIgnoreCase("listar")) {

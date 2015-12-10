@@ -97,12 +97,6 @@
 	 										 
  										 </c:otherwise>
  										  </c:choose>
-
-								
-<!-- 								<option value="true">Sim</option> -->
-<!-- 								<option value="false">Não</option> -->
-<!-- 							</select> <br /> -->
-							
 						</div>
 					</div>
 

@@ -26,8 +26,8 @@
       		<div class="container">
        			 <div class="row">
          			 <div class="col-md-12">
-           				 <h1 class="text-center">UC004 - Manter Moto Taxista</h1>
-            			 <p class="text-center">Seja bem-vindo! Por favor, escolha um dos Mototaxistas para efetuar as manutenções desejadas ou adicione um novo:</p>
+           				 <h1 class="text-center">UC005 - Mostrar média de um MotoTaxista</h1>
+            			 <p class="text-center">Seja bem-vindo! Por favor, escolha um dos Mototaxistas para listar a média, de acordo com as avaliações realizadas até o momento:</p>
           			</div>
        			 </div>
       		</div>

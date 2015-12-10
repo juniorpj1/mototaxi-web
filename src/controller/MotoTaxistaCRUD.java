@@ -22,7 +22,7 @@ public class MotoTaxistaCRUD extends HttpServlet {
 
 	// private static String CONFIRMACAO = "/administrador/motoConfirm.jsp";
 	private static String LISTAR_2 = "/administrador/listarMototaxista2.jsp";
-	private static String VISUALIZAR = "/administrador/vizualizarMototaxista.jsp";
+	private static String VISUALIZAR = "/administrador/visualizarMototaxista.jsp";
 	private static String LISTAR_MEDIA = "/administrador/mediaListar.jsp";
 	private static String INSERIR_OU_ALTERAR = "/administrador/motoForm.jsp";
 	private static String LISTAR = "/administrador/listarMototaxista.jsp";

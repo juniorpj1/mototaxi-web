@@ -30,7 +30,9 @@
 		 				<h1>Ocorreu um erro:</h1>
 		 					<p>${erro}</p>
 		 					
-		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar ao caso de uso<br></a></b>
+		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar (MotoTaxista)<br></a>
+		 					<a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar (Empresa)<br></a>
+		 					
 		 			</div>
 		 		</div>
 		 	</div>
