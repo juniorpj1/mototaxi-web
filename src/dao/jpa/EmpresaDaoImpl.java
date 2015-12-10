@@ -7,6 +7,7 @@ import javax.persistence.Query;
 
 import dao.EmpresaDao;
 import dominio.Empresa;
+import dominio.MotoTaxista;
 
 public class EmpresaDaoImpl implements EmpresaDao {
 	
@@ -17,7 +18,16 @@ public class EmpresaDaoImpl implements EmpresaDao {
 	}
 
 	@Override
-	public void inserirAtualizar(Empresa x) {
+	public void inserir(Empresa x) {
+		if(x.getCodEmpresa() != null){
+			x = em.merge(x);
+		}
+		em.persist(x);
+		
+	}
+	
+	@Override
+	public void alterar(Empresa x) {
 		if(x.getCodEmpresa() != null){
 			x = em.merge(x);
 		}
@@ -45,4 +55,38 @@ public class EmpresaDaoImpl implements EmpresaDao {
 		return query.getResultList();
 	}
 
+	public boolean jaExisteCnpj(String cnpj){
+
+		String hql = "SELECT c FROM Empresa c WHERE c.cnpj = :cnpj";
+		Query query = em.createQuery(hql);
+		query.setParameter("cnpj", cnpj);
+		return query.getResultList().size() > 0;
+	}
+	
+	public boolean jaExisteRazaoSocial(String razaoSocial){
+
+		String hql = "SELECT c FROM Empresa c WHERE c.razaoSocial = :razaoSocial";
+		Query query = em.createQuery(hql);
+		query.setParameter("razaoSocial", razaoSocial);
+		return query.getResultList().size() > 0;
+	}
+	
+	@Override
+	public boolean jaExisteOutroCnpj(String cnpj, Empresa x) {
+		String hql = "SELECT cnpj from Empresa WHERE cnpj= :cnpj and codEmpresa != :codigo";
+		Query query = em.createQuery(hql);
+		query.setParameter("codigo", x.getCodEmpresa());
+		query.setParameter("cnpj", cnpj);
+		return query.getResultList().size() > 0;
+	}
+	
+	@Override
+	public boolean jaExisteOutraRazaoSocial(String razaoSocial, Empresa x) {
+		String hql = "SELECT razaoSocial from Empresa WHERE razaoSocial = :razaoSocial and codEmpresa != :codigo";
+		Query query = em.createQuery(hql);
+		query.setParameter("razaoSocial", razaoSocial);
+		query.setParameter("codigo", x.getCodEmpresa());
+		return query.getResultList().size() > 0;
+	}
+	
 }

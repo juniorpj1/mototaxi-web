@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dominio.Empresa;
 import servico.EmpresaServico;
+import servico.ServicoException;
 import servico.ServicoFactory;	
 
 	@WebServlet("/cliente/EmpresaCRUD")
@@ -94,19 +95,30 @@ import servico.ServicoFactory;
 		EmpresaServico empresaServico = ServicoFactory.criarEmpresaServico();
 		String forward = "";
 		
-			try {
-				Empresa empr = instanciar(request);
-				empresaServico.inserirAtualizar(empr);
-				request.setAttribute("lista", empresaServico.buscarTodos());
-				forward = LISTAR;
-			} catch (RuntimeException e) {
-				request.setAttribute("erro", e.getMessage());
-				forward = ERRO;
+		try {
+			Empresa empr = instanciar(request);
+			if(empr.getCodEmpresa() == null){
+				empresaServico.inserir(empr);
+			}else{
+				empresaServico.atualizar(empr);
 			}
+			
+			request.setAttribute("lista", empresaServico.buscarTodos());
+			forward = LISTAR;
+		} 
+		catch (ServicoException s){
+			request.setAttribute("erro", s.getMessage());
+			forward = ERRO;
+		}
+		catch (RuntimeException e) {
+			request.setAttribute("erro", e.getMessage());
+			forward = ERRO;
+		}
 		RequestDispatcher rd = request.getRequestDispatcher(forward);
 		rd.forward(request, response);
 	}
-
+		
+	
 	private Empresa instanciar(HttpServletRequest req) {
 		//EmpresaServico empresaServico = ServicoFactory.criarEmpresaServico();
 		String aux;

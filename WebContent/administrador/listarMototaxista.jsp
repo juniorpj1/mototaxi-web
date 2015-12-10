@@ -97,7 +97,7 @@
 									<td>${x.empresa.nomeFantasia}</td>
 									
 				                    <td class="actions">
-				                        <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+				                        <a class="btn btn-success btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=visualizar&cod=${x.codMotoTaxista}">Visualizar</a>
 				                        <a class="btn btn-warning btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=editar&cod=${x.codMotoTaxista}">Editar</a>
 				                        <a class="btn btn-danger btn-xs" href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=deletar&cod=${x.codMotoTaxista}"> 
 										 <!-- <a class="btn btn-danger btn-xs"  data-toggle="modal" data-target="#delete-modal" data- href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=deletar&cod=${x.codMotoTaxista}">-->	

@@ -22,6 +22,7 @@ public class MotoTaxistaCRUD extends HttpServlet {
 
 	// private static String CONFIRMACAO = "/administrador/motoConfirm.jsp";
 	private static String LISTAR_2 = "/administrador/listarMototaxista2.jsp";
+	private static String VISUALIZAR = "/administrador/vizualizarMototaxista.jsp";
 	private static String LISTAR_MEDIA = "/administrador/mediaListar.jsp";
 	private static String INSERIR_OU_ALTERAR = "/administrador/motoForm.jsp";
 	private static String LISTAR = "/administrador/listarMototaxista.jsp";
@@ -68,6 +69,20 @@ public class MotoTaxistaCRUD extends HttpServlet {
 					request.setAttribute("lista", mototaxistaServico.buscarTodos());
 					forward = LISTAR;
 				}
+			} catch (RuntimeException e) {
+				request.setAttribute("Erro de execução: ", e.getMessage());
+				forward = ERRO;
+			}
+		}
+		
+		else if (cmd.equalsIgnoreCase("visualizar")) {
+			int cod = Integer.parseInt(request.getParameter("cod"));
+			try {
+				MotoTaxista mot = mototaxistaServico.buscar(cod);
+				if (mot != null) {
+					request.setAttribute("mot", mot);
+					forward = VISUALIZAR;
+				} 
 			} catch (RuntimeException e) {
 				request.setAttribute("Erro de execução: ", e.getMessage());
 				forward = ERRO;
@@ -205,8 +220,8 @@ public class MotoTaxistaCRUD extends HttpServlet {
 			aux2 = true;
 		else
 			aux2 = false;
-
 		x.setDisponivel(aux2);
+		
 		aux = req.getParameter("codEmpresa");
 		x.setEmpresa(empresaServico.buscar(Integer.parseInt(aux)));
 
