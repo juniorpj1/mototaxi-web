@@ -5,7 +5,7 @@ import java.util.List;
 import dominio.Empresa;
 
 public interface EmpresaServico {
-	public void excluir(Empresa x);
+	public void excluir(Empresa x) throws ServicoException;
 	public Empresa buscar(int cod);
 	public List<Empresa> buscarTodos();
 	public void inserir(Empresa empr) throws ServicoException;

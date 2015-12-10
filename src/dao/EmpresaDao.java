@@ -12,11 +12,19 @@ public interface EmpresaDao {
 	public List<Empresa> buscarTodos();
 	
 	public boolean jaExisteCnpj(String cnpj);
+	public boolean jaExisteOutroCnpj(String cnpj, Empresa x);
 	
-	public boolean jaExisteRazaoSocial(String razaoSocial);
-	
-	boolean jaExisteOutroCnpj(String cnpj, Empresa x);
-	
+	public boolean jaExisteRazaoSocial(String razaoSocial);	
 	public boolean jaExisteOutraRazaoSocial(String razaoSocial, Empresa x);
+	
+	public boolean jaExisteNomeFantasia(String nomeFantasia);
+	public boolean jaExisteOutroNomeFantasia(String nomeFantasia, Empresa x);
+	
+	public boolean jaExisteTelefone(String telefone);
+	public boolean jaExisteOutroTelefone(String telefone, Empresa x);
+	
+	public boolean jaExisteEmail(String email);
+	public boolean jaExisteOutroEmail(String email, Empresa x);
+	
 }
 

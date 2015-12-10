@@ -23,9 +23,23 @@ public class EmpresaServicoImpl implements EmpresaServico {
 		if(dao.jaExisteCnpj(x.getCnpj())){
 			throw new ServicoException("Este CNPJ já existe!", 1);
 		}
+		
 		if(dao.jaExisteRazaoSocial(x.getRazaoSocial())){
 			throw new ServicoException("Esta razão social já existe!", 1);
 		}
+		
+		if(dao.jaExisteNomeFantasia(x.getNomeFantasia())){
+			throw new ServicoException("Este nome fantasia já existe!", 1);
+		}
+		
+		if(dao.jaExisteTelefone(x.getTelefone())){
+			throw new ServicoException("Este telefone já existe!", 1);
+		}
+		
+		if(dao.jaExisteEmail(x.getEmail())){
+			throw new ServicoException("Este e-mail já existe!", 1);
+		}
+		
 		EM.getLocalEm().getTransaction().begin();
 		dao.inserir(x);
 		EM.getLocalEm().getTransaction().commit();
@@ -49,7 +63,11 @@ public class EmpresaServicoImpl implements EmpresaServico {
 	
 	
 	@Override
-	public void excluir(Empresa x) {
+	public void excluir(Empresa x) throws ServicoException {
+		
+		if(x.getMotoTaxistas().size() > 0){
+		throw new ServicoException("A Empresa possui Mototaxistas associados à ela", 1);
+	}
 		EM.getLocalEm().getTransaction().begin();
 		dao.excluir(x);
 		EM.getLocalEm().getTransaction().commit();

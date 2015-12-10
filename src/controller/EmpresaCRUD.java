@@ -44,6 +44,10 @@ import servico.ServicoFactory;
 						request.setAttribute("erro", "Erro de execução: " + e.getMessage());
 						forward = ERRO;
 					}
+					catch (ServicoException s){
+						request.setAttribute("erro", s.getMessage());
+						forward = ERRO;
+					}
 			}
 
 			else if (cmd.equalsIgnoreCase("editar")) {
