@@ -38,9 +38,9 @@ public class MotoTaxistaCRUD extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 
 		if (cmd == null || cmd.equalsIgnoreCase(""))
-			cmd = "listar";
+			cmd = "lista";
 
-		if (cmd.equalsIgnoreCase("listar")) {
+		if (cmd.equalsIgnoreCase("lista")) {
 			try {
 				request.setAttribute("lista", motoService.buscarTodos());
 				forward = LISTAR;
@@ -51,18 +51,16 @@ public class MotoTaxistaCRUD extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher(forward);
 			rd.forward(request, response);
 		}
-
+		
+	
 		else if (cmd.equalsIgnoreCase("mediacalc")) {
 			int cod = Integer.parseInt(request.getParameter("cod"));
 
 			try {
 				MotoTaxista mots = motoService.buscar(cod);
-				if (mots != null) {
-					request.setAttribute("nome", motoService.buscar(cod).getNome());
-					request.setAttribute("media", motoService.buscar(cod).media());
+					request.setAttribute("nome", mots.getNome());
+					request.setAttribute("media", mots.media());
 					forward = LISTAR_MEDIA;
-				}
-
 			} catch (RuntimeException e) {
 				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
 				forward = ERRO;

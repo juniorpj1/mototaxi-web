@@ -34,7 +34,6 @@
 					<td>${x.placa}</td>
 					<td>${x.disponivel}</td>
 					
-
 					<td><a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=mediacalc&cod=${x.codMotoTaxista}">Mostrar
 							média</a></td>
 				</tr>
