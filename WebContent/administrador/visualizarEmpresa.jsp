@@ -32,7 +32,7 @@
 	<!--  +++++++++++ SECAO PRINCIPAL +++++++++++ -->
 	<div id="margem-pequena">
 		<div id="main" class="container-fluid">
-			<h3 class="page-header">Dados do Mototaxista:</h3>
+			<h3 class="page-header">Dados da Empresa:</h3>
 		</div>
 	</div>
 
@@ -116,7 +116,7 @@
 						<br> <br> <a class="btn btn-success btn-xs"
 							href="<%=request.getContextPath()%>/cliente/EmpresaCRUD?cmd=editar&cod=<%=empr.getCodEmpresa()%>">Editar</a>
 						<a class="btn btn-danger btn-xs"
-							href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar">Voltar</a>
+							href="<%=request.getContextPath()%>/cliente/EmpresaCRUD?cmd=listar">Voltar</a>
 					</div>
 				</div>
 			</div>
