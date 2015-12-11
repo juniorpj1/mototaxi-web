@@ -21,25 +21,20 @@
 				<th>Placa</th>
 				<th>Disponível</th>
 				<th>Empresa</th>
-				<!--  th colspan="2">Ação</th-->
+				
 			</tr>
 		</thead>
 	    <tbody>
-			<c:forEach items="${lista}" var="x">
+			<c:forEach items="${moto}" var="x">
 				<tr>
 					<td>${x.codMotoTaxista}</td>
 					<td>${x.nome}</td>
 					<td>${x.placa}</td>
 					<td>${x.disponivel}</td>
-
 					<td>${x.empresa.nomeFantasia}</td>
 								
 				</tr>
 			</c:forEach>	
-			<form method="post" action="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD?cmd=listar&nome=${x.nome}" >
-	<input type="text" name="nome"> 
-	<input type="submit" value="Pesquisar" />
-
 </tbody>
 	</table>
 </body>
