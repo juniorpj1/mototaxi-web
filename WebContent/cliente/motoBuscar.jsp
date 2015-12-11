@@ -10,12 +10,15 @@
 <title>Roberto - UC010</title>
 </head>
 <body>
-	<h2>Procurar Mototaxista por Nome:</h2>
+	<h2>Formulário por Nome:</h2>
 	<br />
-<form method="get" action="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD?cmd=listar&cmd=${moto.nome}" >
-	<input type="text" name="nome"> 
-	<input type="submit" value="Pesquisar" />
 
-</form>
+	<form method="post"
+		action="<%=request.getContextPath()%>/cliente/MotoTaxistas2CRUD">
+
+		<input type="hidden" name="cod" value="${cod}" /> <input type="text"
+			name="nome" /> 
+			<input type="submit" value="Pesquisar" />
+	</form>
 </body>
 </html>
