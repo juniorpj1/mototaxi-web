@@ -23,32 +23,26 @@ public class MotoTaxistas2CRUD extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		MotoTaxistaServico motoService = ServicoFactory.criarMotoTaxistaServico();
 
 		String forward = "";
-		String cmd = request.getParameter("cmd");
 
-		if (cmd == null || cmd.equalsIgnoreCase(""))
-			cmd = "listar";
-		if (cmd.equalsIgnoreCase("listar")) {
-			try {
-				List<MotoTaxista> moto = motoService.buscarPorNome(cmd);
-				if (moto != null) {
-					request.setAttribute("lista", moto);
-					forward = LISTAR;
-				}
-				else {
-					request.setAttribute("lista", motoService.buscarTodos());
-					forward = LISTAR;
-				}
+		String nome = request.getParameter("nome");
 
-				forward = LISTAR;
-			} catch (RuntimeException e) {
-				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
-				forward = ERRO;
-			}
-			RequestDispatcher rd = request.getRequestDispatcher(forward);
-			rd.forward(request, response);
+		try {
+
+			List<MotoTaxista> moto = motoService.buscarPorNome(nome);
+
+			request.setAttribute("moto", moto);
+			forward = LISTAR;
+
+		} catch (RuntimeException e) {
+			request.setAttribute("erro", "Erro de execução: " + e.getMessage());
+			forward = ERRO;
 		}
+		RequestDispatcher rd = request.getRequestDispatcher(forward);
+		rd.forward(request, response);
 	}
+
 }
