@@ -20,8 +20,6 @@ import servico.ServicoFactory;
 public class MotoTaxistaCRUD extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	// private static String CONFIRMACAO = "/administrador/motoConfirm.jsp";
-	private static String LISTAR_2 = "/administrador/listarMototaxista2.jsp";
 	private static String VISUALIZAR = "/administrador/visualizarMototaxista.jsp";
 	private static String LISTAR_MEDIA = "/administrador/mediaListar.jsp";
 	private static String INSERIR_OU_ALTERAR = "/administrador/motoForm.jsp";
@@ -135,16 +133,6 @@ public class MotoTaxistaCRUD extends HttpServlet {
 			try {
 				request.setAttribute("lista", mototaxistaServico.buscarTodos());
 				forward = LISTAR;
-			} catch (RuntimeException e) {
-				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
-				forward = ERRO;
-			}
-		}
-
-		else if (cmd.equalsIgnoreCase("listar2")) {
-			try {
-				request.setAttribute("lista", mototaxistaServico.buscarTodos());
-				forward = LISTAR_2;
 			} catch (RuntimeException e) {
 				request.setAttribute("erro", "Erro de execução: " + e.getMessage());
 				forward = ERRO;

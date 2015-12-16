@@ -53,7 +53,7 @@
         					</li>
         					
         					<li class="list-group-item">
-        					<b><a href="<%=request.getContextPath()%>/cliente/MotoTaxistaCRUD?cmd=listar2"> UC005 - Mostrar média de um Mototaxista</a></b>
+        					<b> UC005 - Mostrar média de um Mototaxista</b>
         					</li>
         					
         					<li class="list-group-item">
